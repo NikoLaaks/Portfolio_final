@@ -1,0 +1,329 @@
+body, h1, h2, h3, p, ul {
+    margin: 0;
+    padding: 0;
+}
+h1, h2, h3, button {
+    font-family: 'Source sans pro', sans-serif;
+}
+p, ul {
+    font-family: 'Source sans pro', sans-serif;
+}
+.divider-left {
+    height: 8px;
+    background: linear-gradient(45deg, #BBBDF6, transparent);
+    margin: 0px 0;
+  }
+.divider-right {
+    height: 8px;
+    background: linear-gradient(-45deg, #BBBDF6, transparent);
+    margin: 0px 0;
+  }
+
+
+body {
+    line-height: 1.6;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    background-color: #fafafa;
+    border-bottom: 1px solid #0A090C;
+    padding-left: 5rem;
+    padding-right: 5rem;
+}
+
+header .logo a {
+    font-size: 1.8rem;
+    color: #0A090C;
+    text-decoration: none;
+    font-weight: bold;
+}
+header nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header nav ul {
+    list-style-type: none;
+    display: flex;
+}
+
+header nav ul li {
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    color: #0A090C;
+    text-decoration: none;
+    font-size: 1.25rem;
+}
+
+/* Hero section */
+#hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem;
+    background-color: #fafafa; /* Fallback color */
+    background-image: url('assets/y-so-serious-white.png');
+    background-repeat: repeat;
+    color: #0A090C;
+    min-height: 50vh;
+}
+
+#hero-left {
+    max-width: 50%;
+}
+
+#hero-left h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+#hero-left p {
+    font-size: 1.75rem;
+    margin-bottom: 1.5rem;
+}
+
+#hero-left button {
+    background-color: #BBBDF6;
+    color: #0A090C;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    min-height: auto;
+    min-width: 200px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border: 1px solid #0A090C;
+    border-radius: 5px;
+}
+
+
+/* About section */
+#about {
+    padding: 4rem;
+    background-color: #fafafa;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#about h2 {
+    font-size: 2rem;
+    margin-bottom: 3rem;
+}
+
+#about .content {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    max-width: 70%;
+}
+
+#about img {
+    width: 22%;
+    height: auto;
+    margin-right: 20px;
+    border-radius: 35px;
+}
+
+#about p {
+    font-size: 1.2rem;
+    max-width: 50%;
+}
+
+/* Skills section */
+#skills {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    background-color: #fafafa; /* Fallback color */
+    background-image: url('assets/y-so-serious-white.png');
+    background-repeat: repeat;
+    padding-bottom: 4rem;
+    padding-top: 4rem;
+}
+#boxes {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    max-width: 1200px;
+    flex-wrap: wrap;
+}
+
+#skills h2 {
+    font-size: 2rem;
+    margin-bottom: 3rem;
+}
+
+.box ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.box li {
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #BBBDF6;
+    color: #0A090C;
+    border-radius: 5px;
+    font-size: 1.3rem;
+    text-align: center;
+    width: 200px; /* Set a fixed width for the boxes */
+}
+
+/* Projects section */
+.projects {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 40px;
+  }
+  
+  .project-card {
+    display: flex;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s;
+  }
+  
+  .project-card:hover {
+    transform: translateY(-10px);
+  }
+  
+  .project-image img {
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px 0 0 10px;
+  }
+  
+  .project-details {
+    padding: 20px;
+    flex: 1;
+  }
+  
+  .project-details h3 {
+    margin: 0;
+    font-size: 1.4rem;
+  }
+  
+  .project-details p {
+    margin: 5px 0;
+  }
+
+/* Contact section */
+#contact {
+    padding: 50px 20px;
+    background-color: #fafafa; /* Fallback color */
+    background-image: url('assets/y-so-serious-white.png');
+    background-repeat: repeat;
+    text-align: center;
+}
+
+#contact h2 {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 30px;
+    color: #333; /* Dark gray color */
+}
+
+/* Style for the form inside the #contact section */
+#contact #contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#contact label {
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 8px;
+    text-align: left;
+    width: 100%;
+    color: #333;
+}
+
+#contact input,
+#contact textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    background-color: #fafafa;
+    box-sizing: border-box;
+}
+
+/* Focus styling for input fields inside #contact */
+#contact input:focus, 
+#contact textarea:focus {
+    border-color: #007BFF; /* Blue border when focused */
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Style for textarea (Message) inside #contact */
+#contact textarea {
+    height: 150px;
+    resize: vertical; /* Allow vertical resizing only */
+}
+
+/* Button Styling for buttons inside the #contact section */
+#contact button {
+    padding: 12px 20px;
+    background-color: #BBBDF6;
+    color: #0A090C;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 500;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Button Hover Effect inside #contact */
+#contact button:hover {
+    background-color: #5d5eb1;
+    transform: scale(1.05);
+}
+
+/* Responsive Design: Make the form more compact on smaller screens */
+@media screen and (max-width: 768px) {
+    #contact #contact-form {
+        width: 90%;
+        padding: 15px;
+    }
+
+    #contact button {
+        font-size: 1rem;
+    }
+}
+  
+
+/* Footer */
+footer {
+    background-color: #fafafa;
+    text-align: center;
+    padding: 1rem;
+}
+
+footer p {
+    margin: 0;
+}

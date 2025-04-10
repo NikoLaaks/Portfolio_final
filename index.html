@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Niko Laaksonen - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap">
+</head>
+<body>
+    <!-- Navbar -->
+    <header>
+        <div class="logo">
+            <a href="#">Niko Laaksonen</a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#hero">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero">
+            <div id="hero-left">
+                <h1>Hello.<br>I am Niko</h1>
+                <p>“A student learning a variety of development skills, from front-end to back-end, testing and everything in between.”</p>
+                <button type="button">My GitHub</button>
+            </div>
+        </section>
+
+        <div class="divider-left"></div>
+        <!-- About Section -->
+        <section id="about">
+            <h2>About Me</h2>
+            <div class="content">
+                <img src="assets/2_1.png" alt="About Me">
+                <p>I’m Niko Laaksonen, a business information technology student exploring different areas of development, from programming to data analytics. I love learning new technologies and honing my skills.<br> Outside of tech, I enjoy fishing and hitting the gym in my free time.</p>
+            </div>
+        </section>
+
+        <div class="divider-right"></div>
+        <!-- Skills Section -->
+        <section id="skills">
+            <h2>Technologies I'm Learning</h2>
+            <div id="boxes">
+                <div id="1_box" class="box">
+                    <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                    <li>Python</li>
+                    <li>Java</li>
+                    <li>PHP</li>
+                    </ul>
+                </div>
+                <div id="2_box" class="box">
+                    <ul>
+                        <li>React Native</li>
+                        <li>Node.js</li>
+                        <li>Express</li>
+                        <li>Wordpress</li>
+                        <li>Three.js</li>
+                    </ul>
+                </div>
+                <div id="3_box" class="box">
+                    <ul>
+                        <li>Linux</li>
+                        <li>Blender</li>
+                        <li>GitHub</li>
+                        <li>MySQL</li>
+                        <li>MongoDB</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <div class="divider-left"></div>
+        <!-- Projects Section -->
+        <section id="projects">
+            <h2>My Projects</h2>
+            <div class="project-card">
+                <div class="project-image">
+                <img src="path-to-your-image.jpg" alt="Project 1">
+                </div>
+                <div class="project-details">
+                <h3>Project 1: Cool Web App</h3>
+                <p>A brief description of your web app or project. Explain what it does, what technologies you're using, and why it excites you.</p>
+                <p><strong>Technologies:</strong> React, Node.js, MongoDB</p>
+                <p><strong>Status:</strong> In Progress</p>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-image">
+                <img src="path-to-your-image2.jpg" alt="Project 2">
+                </div>
+                <div class="project-details">
+                <h3>Project 2: Portfolio Website</h3>
+                <p>This is the website you're building! Include features, future plans, or something unique about it.</p>
+                <p><strong>Technologies:</strong> HTML, CSS, JavaScript</p>
+                <p><strong>Status:</strong> Completed</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="divider-right"></div>
+        <!-- Contact Section -->
+        <section id="contact">
+            <h2>Contact</h2>
+            <form id="contact-form">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+              
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+              
+                <label for="message">Message</label>
+                <textarea id="message" name="message" required></textarea>
+              
+                <button type="submit">Send Message</button>
+              </form>
+        </section>
+    </main>
+    <div class="divider-left"></div>
+    <footer>
+        <p>&copy; 2025 Niko Laaksonen. All rights reserved.</p>
+        <p>Background image by <a href="https://www.toptal.com/designers/subtlepatterns/" target="_blank">Toptal Subtle Patterns</a>.</p>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
