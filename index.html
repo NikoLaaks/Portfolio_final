@@ -16,7 +16,7 @@
         </div>
         <nav>
             <ul>
-                <li><a href="#hero">About</a></li>
+                <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
@@ -40,9 +40,32 @@
         <!-- About Section -->
         <section id="about">
             <h2>About Me</h2>
-            <div class="content">
-                <img src="assets/2_1.png" alt="About Me">
-                <p>I’m Niko Laaksonen, a business information technology student exploring different areas of development, from programming to data analytics. I love learning new technologies and honing my skills.<br> Outside of tech, I enjoy fishing and hitting the gym in my free time.</p>
+            <div class="about-wrapper">
+                <div id="about-left">
+                    <img src="assets/2_1.png" alt="About Me">
+                    <button id="toggle-btn" onclick="toggleAbout()">Read more</button>
+                </div>
+                <div class="about-text">
+                    <p>
+                        I’m Niko Laaksonen, a Business Information Technology student with a strong curiosity for all things in tech. 
+                        My journey into development has been shaped by both hands-on technical work and a lifelong interest in computers and software.
+                    </p>
+                    <div id="more-text" class="hidden">
+                        <p>
+                            Before diving into IT, I worked for five years in the metal industry, specializing in polishing and post-processing of high-precision components. 
+                            That experience taught me patience, attention to detail, and a deep respect for quality—traits I now bring into the world of programming.
+                        </p>
+                        <p>
+                            I’ve been into tech my whole life—trying out everything from making music on the computer to messing around with 3D modeling, editing videos, and even building small games. 
+                            That curiosity eventually led me to coding, where I found something that really clicks. 
+                            These days, I'm focused on improving as a developer, writing clean code, building useful things, and learning as much as I can along the way.
+                        </p>
+                        <p>
+                            In my free time, you’ll usually find me fishing, at the gym, or deep into a new programming challenge just for fun.
+                        </p>
+                    </div>
+                    
+                </div>
             </div>
         </section>
 
@@ -109,6 +132,7 @@
                 </div>
             </div>
         </section>
+        
 
         <div class="divider-right"></div>
         <!-- Contact Section -->
@@ -139,5 +163,6 @@
     </footer>
 
     <script src="main.js"></script>
+
 </body>
 </html>

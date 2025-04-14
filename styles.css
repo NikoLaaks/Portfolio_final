@@ -100,6 +100,11 @@ header nav ul li a {
     font-weight: bold;
     border: 1px solid #0A090C;
     border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+#hero-left button:hover {
+    background-color: #5d5eb1;
+    transform: scale(1.05);
 }
 
 
@@ -123,16 +128,80 @@ header nav ul li a {
     max-width: 70%;
 }
 
+.about-wrapper {
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+    margin-left: 4rem;
+    margin-right: 4rem;
+    justify-content:center;
+}
+
+#about-left{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 0 1 300px;
+    margin-right: 1rem;
+    
+}
+#toggle-btn {
+    background-color: #BBBDF6;
+    color: #0A090C;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    min-height: auto;
+    min-width: 200px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border: 1px solid #0A090C;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+#toggle-btn:hover {
+    background-color: #5d5eb1;
+    transform: scale(1.05);
+}
+
 #about img {
-    width: 22%;
+    width: 80%;
+    max-width: 300px;
     height: auto;
-    margin-right: 20px;
     border-radius: 35px;
+    border: 4px solid #5d5eb1;
+    margin-bottom: 2rem;
+    flex-shrink: 0;
 }
 
 #about p {
     font-size: 1.2rem;
-    max-width: 50%;
+    margin-bottom: 1rem;
+}
+
+.about-text {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    flex: 1 1 0;;
+    width: 100%;
+    max-width: 600px;
+    min-width: 300px;
+    border: 2px solid #5d5eb1;
+    border-radius: 10px;
+    padding: 20px;
+}
+#more-text {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.5s ease, opacity 0.5s ease;
+}
+
+#more-text.show {
+    max-height: 500px; /* or some high enough value */
+    opacity: 1;
 }
 
 /* Skills section */
@@ -286,16 +355,18 @@ header nav ul li a {
 
 /* Button Styling for buttons inside the #contact section */
 #contact button {
-    padding: 12px 20px;
     background-color: #BBBDF6;
     color: #0A090C;
-    font-family: 'Source Sans Pro', sans-serif;
-    font-weight: 500;
+    padding: 10px 20px;
     border: none;
-    border-radius: 6px;
-    font-size: 1.1rem;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    min-height: auto;
+    min-width: 200px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border: 1px solid #0A090C;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
 }
 
 /* Button Hover Effect inside #contact */

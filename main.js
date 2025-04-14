@@ -11,3 +11,17 @@ const form = document.getElementById('contact-form');
         alert('Failed to send message. Please try again later.');
       });
   });
+
+
+  function toggleAbout() {
+    const moreText = document.getElementById("more-text");
+    const btn = document.getElementById("toggle-btn");
+  
+    moreText.classList.toggle("show");
+  
+    if (moreText.classList.contains("show")) {
+      btn.innerText = "Show less";
+    } else {
+      btn.innerText = "Read more";
+    }
+  }
