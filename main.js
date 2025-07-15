@@ -1,3 +1,6 @@
+// Initialize EmailJS with your public key
+emailjs.init('sYSWu1bBdfZ3k1C30'); // Replace with your actual public key from EmailJS
+
 const form = document.getElementById('contact-form');
 
   form.addEventListener('submit', function(event) {
