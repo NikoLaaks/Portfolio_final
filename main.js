@@ -3,14 +3,20 @@ emailjs.init('sYSWu1bBdfZ3k1C30'); // Replace with your actual public key from E
 
 const form = document.getElementById('contact-form');
 
-  form.addEventListener('submit', function(event) {
+form.addEventListener('submit', function(event) {
     event.preventDefault();
-
-    // Replace 'YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', 'YOUR_USER_ID' with actual values from your EmailJS account
-    emailjs.sendForm('service_wjfx8u8', 'template_6iwbx1o', this)
+    
+    console.log('Form submitted'); // Debug log
+    console.log('Form element:', this); // Debug log
+    
+    // Send the form using EmailJS
+    emailjs.sendForm('service_wjfx8u8', 'template_6iwbx1o', form)
       .then(function(response) {
+        console.log('SUCCESS!', response.status, response.text);
         alert('Message sent successfully!');
+        form.reset(); // Clear the form after successful submission
       }, function(error) {
+        console.log('FAILED...', error);
         alert('Failed to send message. Please try again later.');
       });
   });
