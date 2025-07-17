@@ -1,6 +1,4 @@
 # Niko Laaksonen's portfolio
-
-## About
 This is my personal portfolio showcasing my work as a developer. This site features selected projects, my background and ways to contact me.
 
 ## Features
