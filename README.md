@@ -11,11 +11,11 @@ This is my personal portfolio showcasing my work as a developer. This site featu
 This site is built with basic html, css and javascript.
 
 ## TODO
+- MOBIILIVERSIO TOIMIMAAN
 - Tarkista nappien animaatiot
 - Boldaa tärkeät sanat tekstistä
 - Poista kommentteja
 - kuvan paikan vaihto kun mobiiliruutu
-- parempi tarkistus että toimii mobiilissa hyvin kaikki
 - tee readme
 - deploy ja linkit githubiin, linkediniin ja ehkä muihin someihin
 - CV linkki sivuille
