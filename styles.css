@@ -30,6 +30,7 @@ header {
     z-index: 1000;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
     background-color: #fafafa;
@@ -44,6 +45,35 @@ header .logo a {
     text-decoration: none;
     font-weight: bold;
 }
+
+/* Burger Menu */
+.burger-menu {
+    display: none; /* Hidden by default */
+    flex-direction: column;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.burger-menu span {
+    width: 25px;
+    height: 3px;
+    background-color: #0A090C;
+    margin: 3px 0;
+    transition: 0.3s;
+}
+
+.burger-menu.active span:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.burger-menu.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.burger-menu.active span:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
 header nav {
     display: flex;
     align-items: center;
@@ -204,7 +234,7 @@ header nav ul li a {
 }
 
 #more-text.show {
-    max-height: 500px; /* or some high enough value */
+    max-height: 1000px; /* Increased from 500px to accommodate more text */
     opacity: 1;
 }
 
@@ -414,7 +444,6 @@ header nav ul li a {
     transform: scale(1.05);
 }
 
-/* Responsive Design: Make the form more compact on smaller screens */
 @media screen and (max-width: 768px) {
     #contact #contact-form {
         width: 90%;
@@ -448,4 +477,165 @@ footer #socials {
 }
 footer a:hover {
     text-decoration: underline;
+}
+
+
+
+
+
+@media screen and (max-width: 768px) {
+  header {
+    flex-direction: row;
+    align-items: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .burger-menu {
+    display: flex;
+  }
+
+  header nav {
+    position: absolute;
+    top: 100%;
+    right: 1rem;
+    width: 200px;
+    background-color: #fff;
+    border: 2px solid #5d5eb1;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    transform: translateY(-10px);
+    opacity: 0;
+    visibility: hidden;
+    transition: transform 0.3s ease, opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 1001;
+  }
+
+  header nav.active {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+
+  header nav ul {
+    flex-direction: column;
+    width: 100%;
+    margin: 0;
+    padding: 0.5rem 0;
+  }
+
+  header nav ul li {
+    margin: 0;
+    text-align: center;
+    border-bottom: 1px solid #f0f0f0;
+  }
+
+  header nav ul li:last-child {
+    border-bottom: none;
+  }
+
+  header nav ul li a {
+    display: block;
+    padding: 12px 20px;
+    font-size: 1rem;
+    transition: background-color 0.2s ease, color 0.2s ease;
+    border-radius: 5px;
+    margin: 2px 8px;
+  }
+
+  header nav ul li a:hover {
+    background-color: #BBBDF6;
+    color: #0A090C;
+  }
+
+  #hero {
+    flex-direction: column;
+    padding: 2rem 1rem;
+    text-align: center;
+  }
+
+  #hero-left {
+    max-width: 100%;
+  }
+
+  #hero-left h1 {
+    font-size: 2rem;
+  }
+
+  #hero-left p {
+    font-size: 1.2rem;
+  }
+
+  #hero-left button {
+    font-size: 1rem;
+    min-width: 150px;
+  }
+
+  #about {
+    padding: 2rem 1rem;
+  }
+
+  #about .content,
+  .about-wrapper {
+    flex-direction: column;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  #about-left {
+    margin-right: 0;
+  }
+
+  .about-text {
+    max-width: 100%;
+    padding: 1rem;
+  }
+  .about-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #toggle-btn {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  #skills #boxes {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .box li {
+    width: 75px;
+    font-size: 1rem;
+    margin: 5px;
+  }
+
+  .project-card {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .project-image img {
+    width: 100%;
+    max-height: 200px;
+  }
+
+  #project-cards {
+    padding: 1rem;
+  }
+
+  #projects button,
+  #contact button {
+    font-size: 1rem;
+    min-width: auto;
+    width: 100%;
+  }
+
+  #contact h2 {
+    font-size: 2rem;
+  }
 }

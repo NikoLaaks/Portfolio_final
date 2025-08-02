@@ -34,3 +34,21 @@ form.addEventListener('submit', function(event) {
       btn.innerText = "Read more";
     }
   }
+
+  // Burger Menu Functionality
+  const burgerMenu = document.getElementById('burger-menu');
+  const navMenu = document.getElementById('nav-menu');
+
+  burgerMenu.addEventListener('click', function() {
+    burgerMenu.classList.toggle('active');
+    navMenu.classList.toggle('active');
+  });
+
+  // Close menu when clicking on a navigation link
+  const navLinks = document.querySelectorAll('#nav-menu a');
+  navLinks.forEach(link => {
+    link.addEventListener('click', function() {
+      burgerMenu.classList.remove('active');
+      navMenu.classList.remove('active');
+    });
+  });
