@@ -35,9 +35,25 @@
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
                 <!-- Mobile-only social links: these will appear inside the hamburger menu on small screens -->
-                <li class="mobile-social"><a href="https://www.linkedin.com/in/niko-laaksonen-72b67b2bb/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">LinkedIn</a></li>
-                <li class="mobile-social"><a href="https://github.com/NikoLaaks" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile">GitHub</a></li>
-                <li class="mobile-social"><a href="assets/Niko_Laaksonen_CV.pdf" target="_blank" rel="noopener noreferrer" aria-label="Download CV (PDF)">CV</a></li>
+                <li class="mobile-social">
+                    <a href="https://www.linkedin.com/in/niko-laaksonen-72b67b2bb/" 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    aria-label="LinkedIn profile"
+                    onclick="gtag('event', 'cv_view', { 'event_category': 'engagement', 'event_label': 'header_cv_button' });">LinkedIn</a>
+                </li>
+                <li class="mobile-social">
+                    <a href="https://github.com/NikoLaaks" 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    aria-label="GitHub profile">GitHub</a>
+                </li>
+                <li class="mobile-social">
+                    <a href="assets/Niko_Laaksonen_CV.pdf" 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    aria-label="Download CV (PDF)">CV</a>
+                </li>
             </ul>
         </nav>
         <!-- Header social links kept in header on desktop, will be tucked into nav on mobile -->
@@ -54,7 +70,7 @@
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M12 .5C5.73.5.99 5.24.99 11.5c0 4.66 3.02 8.62 7.22 10.01.53.1.72-.23.72-.51 0-.25-.01-.92-.01-1.8-2.94.64-3.56-1.42-3.56-1.42-.48-1.22-1.17-1.55-1.17-1.55-.96-.66.07-.65.07-.65 1.06.08 1.61 1.09 1.61 1.09.94 1.61 2.47 1.15 3.07.88.1-.69.37-1.15.67-1.41-2.35-.27-4.82-1.18-4.82-5.25 0-1.16.41-2.11 1.09-2.86-.11-.27-.48-1.38.1-2.88 0 0 .89-.28 2.92 1.09a10.2 10.2 0 0 1 2.66-.36c.9 0 1.8.12 2.66.36 2.03-1.37 2.92-1.09 2.92-1.09.58 1.5.21 2.61.11 2.88.68.75 1.08 1.7 1.08 2.86 0 4.08-2.48 4.98-4.84 5.24.38.33.72.98.72 1.98 0 1.43-.01 2.58-.01 2.93 0 .28.19.61.73.51C20 20.12 23 16.16 23 11.5 23 5.24 18.27.5 12 .5z" fill="currentColor"/>
                 </svg>
             </a>
-            <a href="assets/Niko_Laaksonen_CV.pdf" class="header-cv" target="_blank" rel="noopener noreferrer" aria-label="Download Niko Laaksonen CV (PDF, 320 KB)">
+            <a href="assets/Niko_Laaksonen_CV.pdf" class="header-cv" target="_blank" rel="noopener noreferrer" aria-label="Download Niko Laaksonen CV (PDF, 320 KB)" onclick="gtag('event', 'cv_view', { 'event_category': 'engagement', 'event_label': 'header_cv_button' });">
                 <span>CV</span>
             </a>
         </div>
