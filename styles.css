@@ -80,6 +80,57 @@ header nav {
     justify-content: center;
 }
 
+/* Header social icons (desktop) */
+.header-socials {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+.header-socials a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  color: #0A090C; /* icon color */
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.2s, color 0.2s, transform 0.12s;
+}
+.header-socials a:hover {
+  color: #ffffff;
+  background-color: #5d5eb1;
+  transform: translateY(-2px);
+}
+.header-socials svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* Header CV button (text + icon) should look consistent with socials but allow text */
+.header-socials .header-cv {
+  width: auto; /* allow text */
+  height: auto;
+  padding: 6px 10px;
+  gap: 8px;
+  font-weight: 700;
+  background: #BBBDF6;
+  color: #0A090C;
+}
+.header-socials .header-cv svg {
+  width: 16px;
+  height: 16px;
+}
+.header-socials .header-cv span {
+  display: inline-block;
+  line-height: 1;
+}
+.header-socials .header-cv:hover {
+  background-color: #5d5eb1;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
 header nav ul {
     list-style-type: none;
     display: flex;
@@ -90,10 +141,67 @@ header nav ul li {
 }
 
 header nav ul li a {
-    color: #0A090C;
-    text-decoration: none;
-    font-size: 1.25rem;
+  color: #0A090C;
+  text-decoration: none;
+  font-size: 1.25rem;
+  padding: 8px 12px;
+  border-radius: 8px;
+  display: inline-block;
+  position: relative;
+  transition: background-color 180ms ease, color 180ms ease, transform 120ms ease;
+  -webkit-tap-highlight-color: transparent;
 }
+
+/* Mobile-only nav entries (hidden on desktop, shown inside hamburger menu) */
+.mobile-social {
+  display: none; /* show only inside mobile nav */
+}
+.mobile-social a {
+  color: #0A090C;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+/* Animated underline / affordance */
+header nav ul li a::after {
+  content: '';
+  position: absolute;
+  left: 12px;
+  right: 12px;
+  bottom: 6px;
+  height: 2px;
+  background: #5d5eb1;
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 220ms cubic-bezier(.2,.9,.2,1);
+  border-radius: 2px;
+  pointer-events: none;
+}
+
+header nav ul li a:hover,
+header nav ul li a:focus {
+  background-color: rgba(91,94,177,0.12);
+  color: #0A090C;
+  transform: translateY(-2px);
+}
+
+header nav ul li a:hover::after,
+header nav ul li a:focus::after {
+  transform: scaleX(1);
+}
+
+/* Active/press state */
+header nav ul li a:active {
+  transform: translateY(0) scale(0.995);
+}
+
+/* Keyboard focus visible for accessibility */
+header nav ul li a:focus-visible {
+  outline: 3px solid rgba(93,94,177,0.18);
+  outline-offset: 4px;
+}
+
+
 
 /* Hero section */
 #hero {
@@ -479,6 +587,23 @@ footer a:hover {
     text-decoration: underline;
 }
 
+footer #socials a {
+  display: inline-block;
+  padding: 8px 12px;
+  margin: 0 6px;
+  background-color: #BBBDF6;
+  color: #0A090C;
+  border-radius: 6px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background-color 0.2s, transform 0.12s;
+}
+footer #socials a:hover {
+  background-color: #5d5eb1;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
 
 
 
@@ -493,6 +618,25 @@ footer a:hover {
 
   .burger-menu {
     display: flex;
+  }
+
+  /* On small screens, tuck the header socials into the nav menu so they don't crowd the header */
+  .header-socials {
+    display: none;
+  }
+
+  /* Show social/CV links inside the mobile nav list */
+  .mobile-social {
+    display: list-item;
+  }
+
+  /* Make sure mobile social anchors look like other mobile nav items */
+  .mobile-social a {
+    display: block;
+    padding: 12px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    margin: 2px 8px;
   }
 
   header nav {
