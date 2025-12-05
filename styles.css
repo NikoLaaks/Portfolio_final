@@ -90,8 +90,8 @@ header nav {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 40px;
-  height: 40px;
+  width: 44px; /* square buttons */
+  height: 44px;
   color: #0A090C; /* icon color */
   text-decoration: none;
   border-radius: 8px;
@@ -103,27 +103,27 @@ header nav {
   transform: translateY(-2px);
 }
 .header-socials svg {
-  width: 20px;
-  height: 20px;
+  width: 26px;
+  height: 26px;
 }
 
-/* Header CV button (text + icon) should look consistent with socials but allow text */
+/* Header CV button: match icon boxes (square) and hide text label in header */
 .header-socials .header-cv {
-  width: auto; /* allow text */
-  height: auto;
-  padding: 6px 10px;
-  gap: 8px;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  gap: 0;
   font-weight: 700;
-  background: #BBBDF6;
   color: #0A090C;
-}
-.header-socials .header-cv svg {
-  width: 16px;
-  height: 16px;
+  background: transparent;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 .header-socials .header-cv span {
   display: inline-block;
   line-height: 1;
+  font-size: 24px;
 }
 .header-socials .header-cv:hover {
   background-color: #5d5eb1;
