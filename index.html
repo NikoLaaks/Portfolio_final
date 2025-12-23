@@ -1,246 +1,396 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Niko Laaksonen - Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap">
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap"
+    />
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-T8YLQ9XHM5"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-T8YLQ9XHM5"
+    ></script>
     <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-        gtag('config', 'G-T8YLQ9XHM5');
+      gtag("config", "G-T8YLQ9XHM5");
     </script>
-</head>
-<body>
+  </head>
+  <body>
     <!-- Navbar -->
     <header>
-        <div class="logo">
-            <a href="#">Niko Laaksonen</a>
-        </div>
-        <div class="burger-menu" id="burger-menu">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-        <nav id="nav-menu">
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <!-- Mobile-only social links: these will appear inside the hamburger menu on small screens -->
-                <li class="mobile-social">
-                    <a href="https://www.linkedin.com/in/niko-laaksonen-72b67b2bb/" 
-                    target="_blank" 
-                    rel="noopener noreferrer" 
-                    aria-label="LinkedIn profile"
-                    onclick="gtag('event', 'cv_view', { 'event_category': 'engagement', 'event_label': 'header_cv_button' });">LinkedIn</a>
-                </li>
-                <li class="mobile-social">
-                    <a href="https://github.com/NikoLaaks" 
-                    target="_blank" 
-                    rel="noopener noreferrer" 
-                    aria-label="GitHub profile">GitHub</a>
-                </li>
-                <li class="mobile-social">
-                    <a href="assets/Niko_Laaksonen_CV.pdf" 
-                    target="_blank" 
-                    rel="noopener noreferrer" 
-                    aria-label="Download CV (PDF)">CV</a>
-                </li>
-            </ul>
-        </nav>
-        <!-- Header social links kept in header on desktop, will be tucked into nav on mobile -->
-        <div class="header-socials">
-            <a href="https://www.linkedin.com/in/niko-laaksonen-72b67b2bb/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">
-                <!-- LinkedIn SVG -->
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                    <path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6C1.12 6 0 4.88 0 3.5C0 2.12 1.12 1 2.5 1C3.87 1 4.98 2.12 4.98 3.5ZM0.5 8.5H4.5V24H0.5V8.5ZM8.5 8.5H12.1V10.7H12.2C12.8 9.6 14.5 8.4 16.7 8.4C21 8.4 22 11.2 22 15.4V24H18V16.3C18 14.4 17.9 11.9 15 11.9C12.1 11.9 11.6 13.8 11.6 16V24H8.5V8.5Z" fill="currentColor"/>
-                </svg>
-            </a>
-            <a href="https://github.com/NikoLaaks" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile">
-                <!-- GitHub SVG -->
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 .5C5.73.5.99 5.24.99 11.5c0 4.66 3.02 8.62 7.22 10.01.53.1.72-.23.72-.51 0-.25-.01-.92-.01-1.8-2.94.64-3.56-1.42-3.56-1.42-.48-1.22-1.17-1.55-1.17-1.55-.96-.66.07-.65.07-.65 1.06.08 1.61 1.09 1.61 1.09.94 1.61 2.47 1.15 3.07.88.1-.69.37-1.15.67-1.41-2.35-.27-4.82-1.18-4.82-5.25 0-1.16.41-2.11 1.09-2.86-.11-.27-.48-1.38.1-2.88 0 0 .89-.28 2.92 1.09a10.2 10.2 0 0 1 2.66-.36c.9 0 1.8.12 2.66.36 2.03-1.37 2.92-1.09 2.92-1.09.58 1.5.21 2.61.11 2.88.68.75 1.08 1.7 1.08 2.86 0 4.08-2.48 4.98-4.84 5.24.38.33.72.98.72 1.98 0 1.43-.01 2.58-.01 2.93 0 .28.19.61.73.51C20 20.12 23 16.16 23 11.5 23 5.24 18.27.5 12 .5z" fill="currentColor"/>
-                </svg>
-            </a>
-            <a href="assets/Niko_Laaksonen_CV.pdf" class="header-cv" target="_blank" rel="noopener noreferrer" aria-label="Download Niko Laaksonen CV (PDF, 320 KB)" onclick="gtag('event', 'cv_view', { 'event_category': 'engagement', 'event_label': 'header_cv_button' });">
-                <span>CV</span>
-            </a>
-        </div>
+      <div class="logo">
+        <a href="#">Niko Laaksonen</a>
+      </div>
+      <div class="burger-menu" id="burger-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <nav id="nav-menu">
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <!-- Mobile-only social links: these will appear inside the hamburger menu on small screens -->
+          <li class="mobile-social">
+            <a
+              href="https://www.linkedin.com/in/niko-laaksonen-72b67b2bb/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn profile"
+              onclick="gtag('event', 'cv_view', { 'event_category': 'engagement', 'event_label': 'header_cv_button' });"
+              >LinkedIn</a
+            >
+          </li>
+          <li class="mobile-social">
+            <a
+              href="https://github.com/NikoLaaks"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub profile"
+              >GitHub</a
+            >
+          </li>
+          <li class="mobile-social">
+            <a
+              href="assets/Niko_Laaksonen_CV.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Download CV (PDF)"
+              >CV</a
+            >
+          </li>
+        </ul>
+      </nav>
+      <!-- Header social links kept in header on desktop, will be tucked into nav on mobile -->
+      <div class="header-socials">
+        <a
+          href="https://www.linkedin.com/in/niko-laaksonen-72b67b2bb/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="LinkedIn profile"
+        >
+          <!-- LinkedIn SVG -->
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true"
+          >
+            <path
+              d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6C1.12 6 0 4.88 0 3.5C0 2.12 1.12 1 2.5 1C3.87 1 4.98 2.12 4.98 3.5ZM0.5 8.5H4.5V24H0.5V8.5ZM8.5 8.5H12.1V10.7H12.2C12.8 9.6 14.5 8.4 16.7 8.4C21 8.4 22 11.2 22 15.4V24H18V16.3C18 14.4 17.9 11.9 15 11.9C12.1 11.9 11.6 13.8 11.6 16V24H8.5V8.5Z"
+              fill="currentColor"
+            />
+          </svg>
+        </a>
+        <a
+          href="https://github.com/NikoLaaks"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="GitHub profile"
+        >
+          <!-- GitHub SVG -->
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M12 .5C5.73.5.99 5.24.99 11.5c0 4.66 3.02 8.62 7.22 10.01.53.1.72-.23.72-.51 0-.25-.01-.92-.01-1.8-2.94.64-3.56-1.42-3.56-1.42-.48-1.22-1.17-1.55-1.17-1.55-.96-.66.07-.65.07-.65 1.06.08 1.61 1.09 1.61 1.09.94 1.61 2.47 1.15 3.07.88.1-.69.37-1.15.67-1.41-2.35-.27-4.82-1.18-4.82-5.25 0-1.16.41-2.11 1.09-2.86-.11-.27-.48-1.38.1-2.88 0 0 .89-.28 2.92 1.09a10.2 10.2 0 0 1 2.66-.36c.9 0 1.8.12 2.66.36 2.03-1.37 2.92-1.09 2.92-1.09.58 1.5.21 2.61.11 2.88.68.75 1.08 1.7 1.08 2.86 0 4.08-2.48 4.98-4.84 5.24.38.33.72.98.72 1.98 0 1.43-.01 2.58-.01 2.93 0 .28.19.61.73.51C20 20.12 23 16.16 23 11.5 23 5.24 18.27.5 12 .5z"
+              fill="currentColor"
+            />
+          </svg>
+        </a>
+        <a
+          href="assets/Niko_Laaksonen_CV.pdf"
+          class="header-cv"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Download Niko Laaksonen CV (PDF, 320 KB)"
+          onclick="gtag('event', 'cv_view', { 'event_category': 'engagement', 'event_label': 'header_cv_button' });"
+        >
+          <span>CV</span>
+        </a>
+      </div>
     </header>
 
     <main>
-        <!-- Hero Section -->
-        <section id="hero">
-            <div id="hero-left">
-                <h1>Hello.<br>I am Niko</h1>
-                <p>“A student learning a variety of development skills, from front-end to back-end, testing and everything in between.”</p>
-                <a href="https://github.com/NikoLaaks" target="_blank">
-                    <button type="button">My GitHub</button>
+      <!-- Hero Section -->
+      <section id="hero">
+        <div id="hero-left">
+          <h1>Hello.<br />I am Niko</h1>
+          <p>
+            “A student learning a variety of development skills, from front-end
+            to back-end, testing and everything in between.”
+          </p>
+          <a href="https://github.com/NikoLaaks" target="_blank">
+            <button type="button">My GitHub</button>
+          </a>
+        </div>
+      </section>
+
+      <div class="divider-left"></div>
+      <!-- About Section -->
+      <section id="about">
+        <h2>About Me</h2>
+        <div class="about-wrapper">
+          <div id="about-left">
+            <img src="assets/2_1.png" alt="Image of Niko Laaksonen" />
+            <button id="toggle-btn" onclick="toggleAbout()">Read more</button>
+          </div>
+          <div class="about-text">
+            <p>
+              I’m Niko Laaksonen, a Business Information Technology student with
+              a <strong>strong curiosity for all things in tech.</strong> My journey into
+              development has been shaped by both hands-on technical work and a
+              lifelong interest in computers and software.
+            </p>
+            <div id="more-text" class="hidden">
+              <p>
+                Before diving into IT, I worked for five years in the metal
+                industry, specializing in polishing and post-processing of
+                high-precision components. That experience taught me
+                <strong>patience</strong>, <strong>attention to detail</strong>, and a
+                <strong>deep respect for quality</strong>—traits I now bring into the
+                world of programming.
+              </p>
+              <p>
+                I’ve been into tech my whole life—trying out everything from
+                making music on the computer to messing around with
+                3D modeling, video editing, and even
+                game development. That curiosity eventually led me to
+                coding, where I found something that really clicks. These days,
+                I'm focused on <strong>improving as a developer</strong>,
+                <strong>writing clean code</strong>, building useful things, and
+                <strong>learning continuously</strong>.
+              </p>
+              <p>
+                In my free time, you’ll usually find me fishing, at the gym,
+                gaming or deep into a new programming challenge just for fun.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="divider-right"></div>
+      <!-- Skills Section -->
+      <section id="skills">
+        <h2>Technologies I'm Learning</h2>
+        <div id="boxes">
+          <div id="1_box" class="box">
+            <ul>
+              <li>JavaScript</li>
+              <li>Java</li>
+              <li>Python</li>
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>PHP</li>
+            </ul>
+          </div>
+          <div id="2_box" class="box">
+            <ul>
+              <li>React Native</li>
+              <li>Node.js</li>
+              <li>Express</li>
+              <li>Wordpress</li>
+              <li>Three.js</li>
+              <li>Robot Framework</li>
+              <li>UiPath</li>
+            </ul>
+          </div>
+          <div id="3_box" class="box">
+            <ul>
+              <li>Linux</li>
+              <li>MySQL</li>
+              <li>Docker</li>
+              <li>Blender</li>
+              <li>GitHub</li>
+              <li>MongoDB</li>
+              <li>Digital Forensics</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <div class="divider-left"></div>
+      <!-- Projects Section -->
+      <section id="projects">
+        <h2>My Projects</h2>
+        <div id="project-cards">
+          <!-- Project 1 -->
+          <div class="project-card">
+            <div class="project-image">
+              <img src="assets/3DChessGame.jpg" alt="Image for Project 1" />
+            </div>
+            <div class="project-details">
+              <h3>3D Chess browser game</h3>
+              <p>
+                This project is 3D chess game for browser with real chess rules
+                and possibility to play against AI. Every 3D element in this
+                game is made by me using Blender and exported to Three.js. The
+                game uses Stockfish.js for AI and Chess.js for chess rules. Idea
+                for this project came when I first modeled the chess pieces in
+                Blender and wanted to give them a purpose. Since I was already
+                interested in 3D in the browser, I decided to create a playable
+                3D chess game. The game is fully functional and playable, with a
+                simple UI and controls.
+              </p>
+              <p>
+                <strong>Technologies:</strong> JS, Three.js, Chess.js,
+                Stockfish.js
+              </p>
+              <div class="project-buttons">
+                <a href="https://github.com/NikoLaaks/3DChess" target="_blank">
+                  <button type="button">View on GitHub</button>
                 </a>
+                <a href="https://3d-chess-pi.vercel.app/" target="_blank">
+                  <button type="button">Visit site</button>
+                </a>
+              </div>
             </div>
-        </section>
-
-        <div class="divider-left"></div>
-        <!-- About Section -->
-        <section id="about">
-            <h2>About Me</h2>
-            <div class="about-wrapper">
-                <div id="about-left">
-                    <img src="assets/2_1.png" alt="Image of Niko Laaksonen">
-                    <button id="toggle-btn" onclick="toggleAbout()">Read more</button>
-                </div>
-                <div class="about-text">
-                    <p>
-                        I’m Niko Laaksonen, a Business Information Technology student with a strong curiosity for all things in tech. 
-                        My journey into development has been shaped by both hands-on technical work and a lifelong interest in computers and software.
-                    </p>
-                    <div id="more-text" class="hidden">
-                        <p>
-                            Before diving into IT, I worked for five years in the metal industry, specializing in polishing and post-processing of high-precision components. 
-                            That experience taught me patience, attention to detail, and a deep respect for quality—traits I now bring into the world of programming.
-                        </p>
-                        <p>
-                            I’ve been into tech my whole life—trying out everything from making music on the computer to messing around with 3D modeling, editing videos, and even building small games. 
-                            That curiosity eventually led me to coding, where I found something that really clicks. 
-                            These days, I'm focused on improving as a developer, writing clean code, building useful things, and learning as much as I can along the way.
-                        </p>
-                        <p>
-                            In my free time, you’ll usually find me fishing, at the gym, gaming or deep into a new programming challenge just for fun.
-                        </p>
-                    </div>
-                    
-                </div>
+          </div>
+          <!-- Project 2 -->
+          <div class="project-card">
+            <div class="project-image">
+              <img src="assets/mobile_app_img1.jpg" alt="Image for Project 2" />
             </div>
-        </section>
-
-        <div class="divider-right"></div>
-        <!-- Skills Section -->
-        <section id="skills">
-            <h2>Technologies I'm Learning</h2>
-            <div id="boxes">
-                <div id="1_box" class="box">
-                    <ul>
-                        <li>JavaScript</li>
-                        <li>Java</li>
-                        <li>Python</li>
-                        <li>HTML</li>
-                        <li>CSS</li>
-                        <li>PHP</li>
-                    </ul>
-                </div>
-                <div id="2_box" class="box">
-                    <ul>
-                        <li>React Native</li>
-                        <li>Node.js</li>
-                        <li>Express</li>
-                        <li>Wordpress</li>
-                        <li>Three.js</li>
-                        <li>Robot Framework</li>
-                        <li>UiPath</li>
-                    </ul>
-                </div>
-                <div id="3_box" class="box">
-                    <ul>
-                        <li>Linux</li>
-                        <li>MySQL</li>
-                        <li>Docker</li>
-                        <li>Blender</li>
-                        <li>GitHub</li>
-                        <li>MongoDB</li>
-                        <li>Digital Forensics</li>
-                    </ul>
-                </div>
+            <div class="project-details">
+              <h3>Cross-platform movie review app</h3>
+              <p>
+                This project began as group full-stack web application where
+                users can register, log in, write and read moview reviews. My
+                main resposibility was implementing the authentication, user
+                management and profile pages. The backend was built with
+                Express, where I developed authentication using Passport.js with
+                cookies and sessions, including protected routes and
+                authorization middleware. On a later course, the same backend
+                was reused for a React Native mobile app, where I implemented
+                JWT-based authentication and user profile pages.
+              </p>
+              <p>
+                <strong>Technologies:</strong> JavaScript, Node.js, Express,
+                Passport.js, JWT, React Native, MongoDB
+              </p>
+              <!-- Web app buttons -->
+              <div class="project-buttons">
+                <a
+                  href="https://github.com/joni23008/Backend-Web-Development"
+                  target="_blank"
+                >
+                  <button type="button">Backend + Web on Github</button>
+                </a>
+                <a
+                  href="https://moviereview-472307.lm.r.appspot.com/"
+                  target="_blank"
+                >
+                  <button type="button">Visit site</button>
+                </a>
+              </div>
+              <!-- Mobile app button -->
+              <div class="project-buttons">
+                <a
+                  href="https://github.com/Tupolaa/Mobile_project"
+                  target="_blank"
+                >
+                  <button type="button">Mobile app on Github</button>
+                </a>
+              </div>
             </div>
-        </section>
+          </div>
 
-        <div class="divider-left"></div>
-        <!-- Projects Section -->
-        <section id="projects">
-            <h2>My Projects</h2>
-            <div id="project-cards">
-                <!-- Project 1 -->
-                
-                    <div class="project-card">
-                        <div class="project-image">
-                        <img src="assets/3DChessGame.jpg" alt="Image for Project 1">
-                        </div>
-                        <div class="project-details">
-                        <h3>3D Chess browser game</h3>
-                        <p>This project is 3D chess game for browser with real chess rules and possibility to play against AI.
-                            Every 3D element in this game is made by me using Blender and exported to Three.js.
-                            The game uses Stockfish.js for AI and Chess.js for chess rules.
-                            Idea for this project came when I first modeled the chess pieces in Blender and wanted to give them a purpose.
-                            Since I was already interested in 3D in the browser, I decided to create a playable 3D chess game.
-                            The game is fully functional and playable, with a simple UI and controls.
-                        </p>
-                        <p><strong>Technologies:</strong> JS, Three.js, Chess.js, Stockfish.js</p>
-                        <div class="project-buttons">
-                            <a href="https://github.com/NikoLaaks/3DChess" target="_blank">
-                                <button type="button">View on GitHub</button>
-                            </a>
-                            <a href="https://3d-chess-pi.vercel.app/" target="_blank">
-                                <button type="button">Visit site</button>
-                            </a>
-                        </div>
-                        </div>
-                    </div>
-                
-                <div class="project-card">
-                    
-                    <div class="project-details">
-                        <h3>Portfolio website</h3>
-                        <p>This is the website you're currently on. I built it to introduce myself and showcase some of my projects.
-                            The website is built with HTML, CSS, and JavaScript, and is fully responsive.
-                            This site is designed to be simple and easy to navigate. 
-                        </p>
-                        <p><strong>Technologies:</strong> HTML, CSS, JavaScript</p>
-                        <a href="https://github.com/NikoLaaks/Portfolio_final" target="_blank">
-                            <button type="button">View on GitHub</button>
-                        </a>
-                    </div>
-                </div>
+          <!-- Project 3 -->
+          <div class="project-card">
+            <div class="project-details">
+              <h3>Portfolio website</h3>
+              <p>
+                This is the website you're currently on. I built it to introduce
+                myself and showcase some of my projects. The website is built
+                with HTML, CSS, and JavaScript, and is fully responsive. This
+                site is designed to be simple and easy to navigate.
+              </p>
+              <p><strong>Technologies:</strong> HTML, CSS, JavaScript</p>
+              <a
+                href="https://github.com/NikoLaaks/Portfolio_final"
+                target="_blank"
+              >
+                <button type="button">View on GitHub</button>
+              </a>
             </div>
-        </section>
-        
+          </div>
+        </div>
+      </section>
 
-        <div class="divider-right"></div>
-        <!-- Contact Section -->
-        <section id="contact">
-            <h2>Contact</h2>
-            <form id="contact-form">
-                <label for="name">Name</label>
-                <input type="text" id="name" name="name" required>
-              
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" required>
-              
-                <label for="message">Message</label>
-                <textarea id="message" name="message" required></textarea>
-              
-                <button type="submit">Send Message</button>
-              </form>
-        </section>
+      <div class="divider-right"></div>
+      <!-- Contact Section -->
+      <section id="contact">
+        <h2>Contact</h2>
+        <form id="contact-form">
+          <p>
+            Feel free to reach out to me using the form below or via my
+            email:<br />
+            <a href="mailto:niko.laaks@gmail.com">niko.laaks@gmail.com</a>
+          </p>
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required />
+
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="message">Message</label>
+          <textarea id="message" name="message" required></textarea>
+
+          <button type="submit">Send Message</button>
+        </form>
+      </section>
     </main>
     <div class="divider-left"></div>
     <footer>
-        <p id="socials">
-            <a href="https://www.linkedin.com/in/niko-laaksonen-72b67b2bb/" target="_blank">LinkedIn</a> | 
-            <a href="https://github.com/NikoLaaks" target="_blank">GitHub</a>
-        </p>
-        <p>&copy; 2025 Niko Laaksonen. All rights reserved.</p>
-        <p>Background image by <a href="https://www.toptal.com/designers/subtlepatterns/" target="_blank">Toptal Subtle Patterns</a>.</p>
+      <p id="socials">
+        <a
+          href="https://www.linkedin.com/in/niko-laaksonen-72b67b2bb/"
+          target="_blank"
+          >LinkedIn</a
+        >
+        |
+        <a href="https://github.com/NikoLaaks" target="_blank">GitHub</a>
+      </p>
+      <p>&copy; 2025 Niko Laaksonen. All rights reserved.</p>
+      <p>
+        Background image by
+        <a
+          href="https://www.toptal.com/designers/subtlepatterns/"
+          target="_blank"
+          >Toptal Subtle Patterns</a
+        >.
+      </p>
     </footer>
 
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
     <script src="main.js"></script>
-
-</body>
+  </body>
 </html>

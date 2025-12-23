@@ -9,10 +9,3 @@ This is my personal portfolio showcasing my work as a developer. This site featu
 
 ## Built with
 This site is built with basic html, css and javascript.
-
-## TODO
-- Tarkista nappien animaatiot
-- Boldaa tärkeät sanat tekstistä
-- Oman kuvan vaihto
-- deploy ja linkit githubiin, linkediniin ja ehkä muihin someihin
-- CV linkki sivuille
