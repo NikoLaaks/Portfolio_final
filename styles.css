@@ -446,6 +446,7 @@ header nav ul li a:focus-visible {
     height: auto;
     object-fit: cover;
     border-radius: 10px;
+    max-width: 350px;
   }
   
   .project-details {
